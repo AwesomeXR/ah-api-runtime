@@ -1,0 +1,22 @@
+{
+  "name": "ah-api-runtime",
+  "version": "2.0.3",
+  "description": "ah-api-runtime",
+  "files": [
+    "dist"
+  ],
+  "bin": "dist/cli.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "ci": "prettier --check src && tsc -p tsconfig.json --noEmit",
+    "build": "tsc -p tsconfig.build.json -outDir dist",
+    "release": "npm run ci && npm run build && release-it"
+  },
+  "author": "concefly@foxmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4"
+  },
+  "sideEffects": false
+}
